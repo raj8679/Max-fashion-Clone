@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #navblack{
+            width: 100%;
+            height: 50px;
+            background-color: black;
+            display: flex;
+            justify-content: space-around;
+        }
+       #col1{
+        width: 50%;
+        height: 50px;
+        display: flex;
+        gap: 10px;
+       }
+       #col1>div{
+        display: flex;
+       }
+      #col1 img{
+        height: 40px;
+      }
+      #col1>div>p{
+        color: white;
+        margin-right: 10px;
+      }
+      #col2{
+        display: flex;
+        color: white;
+        gap: 10px;
+      }
+       /* sticky */
+       #sticky{
+        width: 100%;
+        height: 80px;
+        background-color: white;
+        display: flex;
+        justify-content: space-around;
+        position: sticky;
+        top: 0px;
+        z-index: 1;
+       }
+       #left{
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        padding: 15px;
+        font-weight: bold;
+       }
+       #left input{
+        width: 40%;
+       }
+       #right{
+        width: 30%;
+        display: flex;
+        gap: 20px;
+        justify-content: space-around;
+        font-weight: bold;
+       }
+       #right img{
+        height: 50px;
+       }
+       /* Offer */
+       #offer{
+        width: 100%;
+        background-color: rgb(64, 64, 161);
+        color: azure;
+        font-weight:bold;
+        text-align:center;
+        padding:2px;
+        font-size: 18px;
+       }
+      /* crauser */
+      #crauser-part{
+        position: relative;
+      }
+      #crauser{
+        width: 80%;
+        height: 550px;
+        margin-left: 10%;
+        margin-top: 20px;
+        
+      }
+      #left-button{
+        position: absolute;
+        top: 45%; 
+        left: 8%;
+        font-size: 20px;
+        border: 0px;
+        cursor: pointer;
+      }
+      #right-button{
+        position: absolute; 
+        top: 45%;
+        right: 8%;
+        font-size: 20px;
+        border: 0px;
+        cursor: pointer;
+      }
+      #twoOffer{
+        margin-left: 11%;
+      }
+      #styleSpotlight{
+        width: 80%;
+        margin: auto;
+        display: flex;
+      }
+      .detail{
+        margin-left:10%;
+      }
+      .line{
+        width: 80%;
+        margin-top:40px;
+      }
+      #shopByCategory{
+        width: 80%;
+       
+        margin:auto;
+        display:grid;
+        grid-template-columns:repeat(6,1fr);
+        gap: 30px 15px;
+       text-align: center;
+      }
+      #shopByCategory img{
+       width: 100%;
+       border-radius: 15px;
+       height: 200px;
+      }
+      #budgetZone{
+        width: 80%;
+        margin:auto;
+      }
+      #budgetZone>img{
+        width: 33%;
+      }
+      #youthStore{
+        width: 80%;
+        margin: auto;
+      }
+       
+
+    </style>
+</head>
+<body>
+     <!-- top-navbar -->
+    <div id="navblack">
+        <div id="col1">
+           <div>
+            <img src="https://www.citypng.com/public/uploads/small/11635937388alumycqgep5h5v2je1trielg1hrrqxrcwjrimwx6yvlf4zqum0dvnfliketuu5pu1aobdjnhf08b9mbpthwhohvyvup761fyaval.png" alt="">
+            <p>Free Shipping</p>
+           </div>
+           <div>
+            <img src="https://png.pngtree.com/png-clipart/20190630/original/pngtree-vector-house-icon-png-image_4163014.jpg" alt="">
+            <p>Return To Store</p>
+           </div>
+           <div>
+            <img src="https://png.pngtree.com/png-clipart/20190630/original/pngtree-vector-house-icon-png-image_4163014.jpg" alt="">
+            <p>Click & Collect</p>
+           </div>
+        </div>
+        <div id="col2">
+            <p>Download Our Apps</p>
+            <p>|</p>
+            <p>Store Locator</p>
+            <p>|</p>
+            <p>Help</p>
+        </div>
+    </div>
+    <!-- sticky navbar -->
+    <div id="sticky">
+        <div id="left">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgPP0VMF5qGhCVR-szEeNGewgNe1xncmTxFj_FCYmGBuGrTAQWjC8DzS6HFQVXpHDD4qE&usqp=CAU" alt="">
+            <p>Women</p>
+            <p>Men</p>
+            <p>Girl</p>
+            <p>Boy</p>
+            <input type="text" placeholder="What are you looking for?">
+        </div>
+        <div id="right">
+            <p>More</p>
+            <p>|</p>
+            <p>Sign Up/Sign In</p>
+            <img src="https://www.citypng.com/public/uploads/preview/black-heart-love-valentine-symbol-sign-icon-transparent-background-11642953885tadwfns4me.png" alt="">
+            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828415.png" alt="">
+        </div>
+    </div>
+    <!-- blue strip -->
+    <div id="offer">
+        <p>Free shipping on All orders + Flat ₹200 off on ₹1999.Code:MAX200 ></p>
+    </div>
+    <!-- crauser -->
+    <div id="crauser-part">
+        <img id="crauser" src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.ssl.cf3.rackcdn.com/MAX-Friday/BLOCK-1-MAX-EOSS-11.JUNE.2018.jpg" alt="">
+        <button id="left-button"><</button>
+        <button id="right-button">></button>
+    </div>
+    <div id="twoOffer">
+        <img src="https://lmsin.net/cdn-cgi/image/w=1232,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock-oneBytwo1A-FREESHIPCOMMON-20JULY2022A.png" alt="">
+    </div>
+    <h1 class="detail">Style Spotlight</h1>
+    <div id="styleSpotlight">
+        <img src="https://lmsin.net/cdn-cgi/image/w=616,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock17One-Women-29JUNE2022.png" alt=""> 
+        <img src="https://lmsin.net/cdn-cgi/image/w=616,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock17Two-Women-29JUNE2022.png" alt="">       
+    </div>
+    <hr class="line">
+    <h1 class="detail">Shop By Category</h1>
+    <div id="shopByCategory">
+        <div>
+            <img src="https://images-na.ssl-images-amazon.com/images/G/31/img19/Fashion/WA19/DressStore_Sobe/updates/kurta._SS680_QL85_.jpg" alt="">
+            <h3>Plus size 3XL-6XL</h3>
+        </div>
+        <div>
+            <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX-maxcurves22Block5-17APRIL2022A.jpg" alt="">
+            <h3>Available  Online Only</h3>
+        </div>
+        <div>
+            <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Curve-Newarrivals-Desktop1-13APRIL2022.jpg" alt="">
+            <h3>Topwear</h3>
+        </div>
+        <div>
+            <img src="https://img.faballey.com/images/product/CTP00603D/1.jpg" alt="">
+            <h3>Dresses</h3>
+        </div>
+        <div>
+            <img src="https://sslimages.shoppersstop.com/sys-master/images/h59/hbc/26708455489566/CORESTKPZ04_BLACK.jpg_230Wx334H" alt="">
+            <h3>Bottomwear</h3>
+        </div>
+        <div>
+            <img src="https://images-na.ssl-images-amazon.com/images/G/31/img2020/fashion/WA_2020/maxmay/essential_kurtas._SY530_QL85_.jpg" alt="">
+            <h3>Kurtas</h3>
+        </div>
+        <div>
+            <img src="https://miro.medium.com/max/400/1*ZhAEjitkD8Va3Ky5edmxnw.jpeg" alt="">
+            <h3>Fusion Dresses</h3>
+        </div>
+        <div>
+            <img src="https://rukminim1.flixcart.com/image/332/398/l2xmqvk0/ethnic-set/q/a/1/m-natsmusm22kt25lavender-max-original-image5txp7vukkw6.jpeg?q=50" alt="">
+            <h3>Suit Sets</h3>
+        </div>
+        <div>
+            <img src="https://cdn.shopify.com/s/files/1/0341/4805/7228/products/13067O_1_400x.jpg?v=1615352658" alt="">
+            <h3>Ethnic Bottoms</h3>
+        </div>
+        <div>
+            <img src="https://media.maxfashion.com/i/max/B22WACFSWELL859SGREYLIGHT-B22WACFSWELL859S-MXSS22050422_01-2100.jpg?$prodimg-d-prt-4$&$quality-standard$&fmt=auto&sm=c" alt="">
+            <h3>Activewear</h3>
+        </div>
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH3lKPh0iJ2tCc4iGi6hDhU3MPRAkcgLXhRkCXL6XihUogIGPe_0MjVcNrz7ex-x_k5xQ&usqp=CAU" alt="">
+            <h3>Sleepwear & Lingerie</h3>
+        </div>
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9L__buPOOXOYZqwAAjc2bWj71uUb_j-uSLV5NOmBozefCGr0m91JKPN81LK1HLyHwFEw&usqp=CAU" alt="">
+            <h3>Outfit Add-ons</h3>
+        </div>
+    </div>
+    <hr class="line">
+    <h1 class="detail">Budget zone </h1>
+    <div id="budgetZone">
+        <img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock19One-Women-18JULY2022.png" alt="">
+        <img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock19Two-Women-18JULY2022.png" alt="">
+        <img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock19Three-Women-18JULY2022.png" alt="">
+    </div>
+    <hr class="line">
+    <h1 class="detail"> Youth Store </h1>
+    <div id="youthStore">
+        <img src="https://lmsin.net/cdn-cgi/image/w=1232,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock-oneBytwo1A-Women-18JULY2022.png" alt="">
+    </div>
+
+  
+
+</body>
+</html>
+<script>
+    let imgLinks=[
+    "https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.ssl.cf3.rackcdn.com/MAX-Friday/BLOCK-1-MAX-EOSS-11.JUNE.2018.jpg",
+        "https://imgaz1.chiccdn.com/os/202003/20200330212837_238.jpg",
+        "https://vedicfashion.com/wp-content/uploads/2022/03/STYLES-FOR-ALL-YOUR-MOOD.webp",
+        "https://cdn.shopify.com/s/files/1/0551/7593/8238/files/WhatsApp_Image_2021-06-22_at_23.53.03_1000x.jpg?v=1625984469",
+    ]
+    let leftBtn=document.getElementById("left-button");
+    let rightBtn=document.getElementById("right-button");
+    let crausers=document.getElementById("crauser");
+    let count=0;
+    rightBtn.addEventListener("click",function(){
+        count++;
+        if(count===imgLinks.length){
+            count=0;
+        }
+        crausers.src=imgLinks[count]
+    })
+
+    leftBtn.addEventListener("click",function(){
+        count--;
+        if(count<0){
+            count=imgLinks.length-1;
+        }
+        crausers.src=imgLinks[count]
+    })
+</script>
