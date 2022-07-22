@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #navbar{
+            width: 100%;
+            height: 45px;
+           background-color:black;
+           display: flex;
+           justify-content:space-around;
+           color:white;
+
+        }
+        #navbar>div{
+            width: 30%;
+            height:100%;
+            display:flex;
+            justify-content:space-around;
+        }
+        #navbar img{
+            width: 35px;
+        }
+        #nav2{
+            width: 30%;
+            height:80px;
+            display:flex;
+            justify-content:space-around;
+            margin-left:10%;
+        }
+        #nav2 img{
+            width:90px;
+        }
+        #pic{
+            width: 100%;
+        }
+        #pic img{
+           width: 100%;
+            height: 480px;
+        }
+        #pic>div:first-child{
+            position:relative;
+        }
+        #pic>div:last-child{
+            font-size: larger;
+            color: white;
+            position: absolute;
+            top:26%;
+            left: 35%;
+        }
+        #pic input{
+            width: 100%;
+            height: 50px;
+        }
+        #hover{
+            width: 80%;
+            height: 650px;
+            margin:auto;
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns:repeat(5,1fr);
+            grid-template-rows:repeat(3,210px);
+            gap:10px;
+        }
+        #hover>div{
+            padding-top: 20px;
+            border:1px solid rgb(201, 191, 191);
+           text-align: center;
+           color: rgb(110, 96, 96);
+           border-radius: 10px;
+        }
+        #hover>div:hover{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            cursor: pointer;
+        }
+        #ques1{
+            margin-left: 10%;
+            color: rgb(110, 96, 96);
+        }
+        #ques2{
+            width: 80%;
+            height: 230px;
+            margin: auto;
+            display: flex;
+            gap: 20px;
+        }
+        #ques2>div{
+            width: 32%;
+            font-size: 23px;
+            line-height:35px;
+            color: rgb(110, 96, 96);
+        }
+        hr{
+            width: 80%;
+            color: rgb(110, 96, 96);
+            margin-top: 35px;
+            margin-bottom: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div>
+            <img src="https://www.citypng.com/public/uploads/small/11635937388alumycqgep5h5v2je1trielg1hrrqxrcwjrimwx6yvlf4zqum0dvnfliketuu5pu1aobdjnhf08b9mbpthwhohvyvup761fyaval.png" alt="">
+            <p>Free Shipping</p>
+            <img src="data:image/png;base64,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" alt="">
+            <p>Return To Store</p>
+        </div>
+        <div>
+            <p>Download Our Apps</p>
+            <p>|</p>
+            <p>Store Locator</p>
+            <p>|</p>
+            <p>Help</p>
+
+        </div>
+    </div>
+    <div id="nav2">
+        <img src="https://www.landmarkgroup.com/int/sites/default/files/Brand-logo/New%20Max%20Logo-%20Eng%20With%20Outline_1.png" alt="">
+        <p>Women</p>
+        <p>Men</p>
+        <p>Girls</p>
+        <p>Boys</p>
+    </div>
+    <div id="pic">
+        <div>
+            <img src="https://uatwww2.maxfashion.in/sites/all/modules/custom/freshdesk/images/banner-desktop.jpg" alt="">
+        </div>
+        <div>
+            <h1>How Can We Help You Today?</h1>
+            <input type="text" placeholder="Enter your search term here">
+        </div>
+    </div>
+    <div id="hover">
+        <div>
+            <img src="https://uatwww2.maxfashion.in/sites/all/modules/custom/freshdesk/images/Shipping.svg" alt="">
+            <h3>Shipping</h3>
+            <p>Get more information on delivery, schedules, charges and more.</p>
+        </div>
+        <div>
+            <img src="https://uatwww2.maxfashion.in/sites/all/modules/custom/freshdesk/images/My%20Account.svg" alt="">
+            <h3>My Account</h3>
+            <p>Learn how to create your account and update your information.</p>
+        </div>
+        <div>
+            <img src="https://uatwww2.maxfashion.in/sites/all/modules/custom/freshdesk/images/Orders.svg" alt="">
+            <h3>Orders</h3>
+            <p>Know more about the order and delivery process.</p>
+        </div>
+        <div>
+            <img src="https://uatwww2.maxfashion.in/sites/all/modules/custom/freshdesk/images/Payments.svg" alt="">
+            <h3>Payments</h3>
+            <p>Find out more about your payment options and plans.</p>
+        </div>
+        <div>
+            <img src="https://uatwww2.maxfashion.in/sites/all/modules/custom/freshdesk/images/Buy%20Now.svg" alt="">
+            <h3>Buy Now</h3>
+            <p>Find out how to pay, checkout and finish shopping in one easy step.</p>
+        </div>
+        <div>
+            <img src="https://uatwww2.maxfashion.in/sites/all/modules/custom/freshdesk/images/Tracking%20and%20Delivery.svg" alt="">
+            <h3>Tracking and Delivery</h3>
+            <p>Get more info on delivery schedules, times and addresses.</p>
+        </div>
+        <div>
+            <img src="https://uatwww2.maxfashion.in/sites/all/modules/custom/freshdesk/images/Returns%20Process.svg" alt="">
+            <h3>Returns Process</h3>
+            <p>Find out how to make a return online, to a store or schedule a pick-up.</p>
+        </div>
+        <div>
+            <img src="https://uatwww2.maxfashion.in/sites/all/modules/custom/freshdesk/images/Returns%20Policy.svg" alt="">
+            <h3>Returns Policy</h3>
+            <p>Discover exactly how or returns and refund works.</p>
+        </div>
+        <div>
+            <img src="https://uatwww2.maxfashion.in/sites/all/modules/custom/freshdesk/images/Click%20&%20Collect.svg" alt="">
+            <h3>Click & Collect</h3>
+            <p>Learn how you can shop and pay online and collect in-store.</p>
+        </div>
+        <div>
+            <img src="https://uatwww2.maxfashion.in/sites/all/modules/custom/freshdesk/images/Gift%20Card.svg" alt="">
+            <h3>Gift Card</h3>
+            <p>Now easily buy or use your gift cards online.</p>
+        </div>
+        <div>
+            <img src="https://uatwww2.maxfashion.in/sites/all/modules/custom/freshdesk/images/Other%20Information.svg" alt="">
+            <h3>Other Information</h3>
+            <p>Important info you need to know about shopping with us.</p>
+        </div>
+        <div>
+            <img src="https://uatwww2.maxfashion.in/sites/all/modules/custom/freshdesk/images/Landmark%20Rewards.svg" alt="">
+            <h3>Landmark Rewards</h3>
+            <p>Discover how our award winning loyality program works.</p>
+        </div>
+        <div>
+            <img src="https://uatwww2.maxfashion.in/sites/all/modules/custom/freshdesk/images/In-Store.svg" alt="">
+            <h3>In-Store</h3>
+            <p>Get more locations, timings, info on Gift vouchers and more.</p>
+        </div>
+
+    </div>
+    <div id="ques1">
+        <h1>Most popular questions</h1>
+    </div>
+    <div id="ques2">
+       <div>
+        <ul>
+            <li>What if I'm not at home when my order arrives?</li>
+            <li>When will I receive my order?</li>
+            <li>What is your policy on returns?</li>
+        </ul>
+       </div>
+       <div>
+        <ul>
+            <li>How do I change my email address?</li>
+            <li>How do I return my products?</li>
+            <li>Can I exchange my purchase for another product?</li>
+        </ul>
+       </div>
+       <div>
+        <ul>
+            <li>How do I cancel an order?</li>
+            <li>I just returned my products. When will I receive my refund?</li>
+            <li>If I have used a promo code to place my order, how is my refund calculated?</li>
+        </ul>
+       </div>
+    </div>
+    <hr>
+    
+
+</body>
+</html>
