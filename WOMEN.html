@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #navblack{
+            width: 100%;
+            height: 50px;
+            background-color: black;
+            display: flex;
+            justify-content: space-around;
+        }
+       #col1{
+        width: 50%;
+        height: 50px;
+        display: flex;
+        gap: 10px;
+       }
+       #col1>div{
+        display: flex;
+       }
+      #col1 img{
+        height: 40px;
+      }
+      #col1>div>p{
+        color: white;
+        margin-right: 10px;
+      }
+      #col2{
+        display: flex;
+        color: white;
+        gap: 10px;
+      }
+       /* sticky */
+       #sticky{
+        width: 100%;
+        height: 80px;
+        background-color: white;
+        display: flex;
+        justify-content: space-around;
+        position: sticky;
+        top: 0px;
+        z-index: 1;
+       }
+       #left{
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        padding: 15px;
+        font-weight: bold;
+       }
+       #left input{
+        width: 40%;
+       }
+       #right{
+        width: 30%;
+        display: flex;
+        gap: 20px;
+        justify-content: space-around;
+        font-weight: bold;
+       }
+       #right img{
+        height: 50px;
+       }
+       /* Offer */
+       #offer{
+        width: 100%;
+        background-color: rgb(64, 64, 161);
+        color: azure;
+        font-weight:bold;
+        text-align:center;
+        padding:2px;
+        font-size: 18px;
+       }
+      /* crauser */
+      #crauser-part{
+        position: relative;
+      }
+      #crauser{
+        width: 80%;
+        height: 550px;
+        margin-left: 10%;
+        margin-top: 20px;
+        
+      }
+      #left-button{
+        position: absolute;
+        top: 45%; 
+        left: 8%;
+        font-size: 20px;
+        border: 0px;
+        cursor: pointer;
+      }
+      #right-button{
+        position: absolute; 
+        top: 45%;
+        right: 8%;
+        font-size: 20px;
+        border: 0px;
+        cursor: pointer;
+      }
+      #twoOffer{
+        margin-left: 11%;
+      }
+      #styleSpotlight{
+        width: 80%;
+        margin: auto;
+        display: flex;
+      }
+      .detail{
+        margin-left:10%;
+      }
+      .line{
+        width: 80%;
+        margin-top:40px;
+      }
+      #shopByCategory{
+        width: 80%;
+       
+        margin:auto;
+        display:grid;
+        grid-template-columns:repeat(6,1fr);
+        gap: 30px 15px;
+       text-align: center;
+      }
+      #shopByCategory img{
+       width: 100%;
+       border-radius: 15px;
+       height: 200px;
+      }
+      #budgetZone{
+        width: 80%;
+        margin:auto;
+      }
+      #budgetZone>img{
+        width: 33%;
+      }
+      #youthStore{
+        width: 80%;
+        margin: auto;
+      }
+      /* part2 */
+      #trends,#trends_2,#topstore,#topstore2,#Giftingzone,#connect{
+        width: 80%;
+        margin:auto;
+      }
+      
+      #topstore img{        
+       width: 33%;
+      }
+      #Giftingzone img{
+      width: 100%;
+      }
+        #subscribe{
+        width: 80%;
+        margin:auto;
+        display: flex;
+        justify-content:space-around;
+      }
+      #subscribe img{
+        width: 35px;
+      }
+      #subscribe input{
+        width: 200px;
+        height: 50px;
+      }
+      #subscribe button{
+        background-color: black;
+        color: white;
+        width: 150px;
+        height: 60px;
+      }
+      #category{
+        width: 80%;
+        margin:auto;
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+      }
+      #category p{
+        line-height: 8px;
+      }
+      #contacts{
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+      }
+      #contacts>div{
+        display: flex;
+        height: 60px;
+        justify-content: space-between;
+      }
+      #contacts>div:first-child>div{
+        display: flex;
+        line-height: 4px;
+        gap: 20px;
+      }
+      #contacts>div:first-child img{
+        width: 20px;
+        border: 1px solid black;
+        border-radius: 100%;
+        padding: 10px;
+        margin-top: 4px;
+        margin-left: 5px;
+      }
+      #contacts>div:last-child img{
+        width: 23px;
+        height: 30px;
+        margin-top:5px;
+        margin-left: 20px;
+      }
+      #last{
+        width: 25%;
+        margin-left: 10%;
+        display: flex;
+        gap: 15px;
+      }
+      #last img{
+        width: 100px;
+      }
+       
+
+    </style>
+</head>
+<body>
+     <!-- top-navbar -->
+    <div id="navblack">
+        <div id="col1">
+           <div>
+            <img src="https://www.citypng.com/public/uploads/small/11635937388alumycqgep5h5v2je1trielg1hrrqxrcwjrimwx6yvlf4zqum0dvnfliketuu5pu1aobdjnhf08b9mbpthwhohvyvup761fyaval.png" alt="">
+            <p>Free Shipping</p>
+           </div>
+           <div>
+            <img src="https://png.pngtree.com/png-clipart/20190630/original/pngtree-vector-house-icon-png-image_4163014.jpg" alt="">
+            <p>Return To Store</p>
+           </div>
+           <div>
+            <img src="https://png.pngtree.com/png-clipart/20190630/original/pngtree-vector-house-icon-png-image_4163014.jpg" alt="">
+            <p>Click & Collect</p>
+           </div>
+        </div>
+        <div id="col2">
+            <p>Download Our Apps</p>
+            <p>|</p>
+            <p>Store Locator</p>
+            <p>|</p>
+           <a href="HELP.html"> <p>Help</p></a>
+        </div>
+    </div>
+    <!-- sticky navbar -->
+    <div id="sticky">
+        <div id="left">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgPP0VMF5qGhCVR-szEeNGewgNe1xncmTxFj_FCYmGBuGrTAQWjC8DzS6HFQVXpHDD4qE&usqp=CAU" alt="">
+            <p>Women</p>
+            <p>Men</p>
+            <p>Girl</p>
+            <p>Boy</p>
+            <input type="text" placeholder="What are you looking for?">
+        </div>
+        <div id="right">
+            <p>More</p>
+            <p>|</p>
+            <p>Sign Up/Sign In</p>
+            <img src="https://www.citypng.com/public/uploads/preview/black-heart-love-valentine-symbol-sign-icon-transparent-background-11642953885tadwfns4me.png" alt="">
+            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828415.png" alt="">
+        </div>
+    </div>
+    <!-- blue strip -->
+    <div id="offer">
+        <p>Free shipping on All orders + Flat ₹200 off on ₹1999.Code:MAX200 ></p>
+    </div>
+    <!-- crauser -->
+    <div id="crauser-part">
+        <img id="crauser" src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.ssl.cf3.rackcdn.com/MAX-Friday/BLOCK-1-MAX-EOSS-11.JUNE.2018.jpg" alt="">
+        <button id="left-button"><</button>
+        <button id="right-button">></button>
+    </div>
+    <div id="twoOffer">
+        <img src="https://lmsin.net/cdn-cgi/image/w=1232,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock-oneBytwo1A-FREESHIPCOMMON-20JULY2022A.png" alt="">
+    </div>
+    <h1 class="detail">Style Spotlight</h1>
+    <div id="styleSpotlight">
+        <img src="https://lmsin.net/cdn-cgi/image/w=616,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock17One-Women-29JUNE2022.png" alt=""> 
+        <img src="https://lmsin.net/cdn-cgi/image/w=616,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock17Two-Women-29JUNE2022.png" alt="">       
+    </div>
+    <hr class="line">
+    <h1 class="detail">Shop By Category</h1>
+    <div id="shopByCategory">
+        <div>
+            <img src="https://images-na.ssl-images-amazon.com/images/G/31/img19/Fashion/WA19/DressStore_Sobe/updates/kurta._SS680_QL85_.jpg" alt="">
+            <h3>Plus size 3XL-6XL</h3>
+        </div>
+        <div>
+            <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX-maxcurves22Block5-17APRIL2022A.jpg" alt="">
+            <h3>Available  Online Only</h3>
+        </div>
+        <div>
+            <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/Max-Flyout-Women-Curve-Newarrivals-Desktop1-13APRIL2022.jpg" alt="">
+            <h3>Topwear</h3>
+        </div>
+        <div>
+            <img src="https://img.faballey.com/images/product/CTP00603D/1.jpg" alt="">
+            <h3>Dresses</h3>
+        </div>
+        <div>
+            <img src="https://sslimages.shoppersstop.com/sys-master/images/h59/hbc/26708455489566/CORESTKPZ04_BLACK.jpg_230Wx334H" alt="">
+            <h3>Bottomwear</h3>
+        </div>
+        <div>
+            <img src="https://images-na.ssl-images-amazon.com/images/G/31/img2020/fashion/WA_2020/maxmay/essential_kurtas._SY530_QL85_.jpg" alt="">
+            <h3>Kurtas</h3>
+        </div>
+        <div>
+            <img src="https://miro.medium.com/max/400/1*ZhAEjitkD8Va3Ky5edmxnw.jpeg" alt="">
+            <h3>Fusion Dresses</h3>
+        </div>
+        <div>
+            <img src="https://rukminim1.flixcart.com/image/332/398/l2xmqvk0/ethnic-set/q/a/1/m-natsmusm22kt25lavender-max-original-image5txp7vukkw6.jpeg?q=50" alt="">
+            <h3>Suit Sets</h3>
+        </div>
+        <div>
+            <img src="https://cdn.shopify.com/s/files/1/0341/4805/7228/products/13067O_1_400x.jpg?v=1615352658" alt="">
+            <h3>Ethnic Bottoms</h3>
+        </div>
+        <div>
+            <img src="https://media.maxfashion.com/i/max/B22WACFSWELL859SGREYLIGHT-B22WACFSWELL859S-MXSS22050422_01-2100.jpg?$prodimg-d-prt-4$&$quality-standard$&fmt=auto&sm=c" alt="">
+            <h3>Activewear</h3>
+        </div>
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH3lKPh0iJ2tCc4iGi6hDhU3MPRAkcgLXhRkCXL6XihUogIGPe_0MjVcNrz7ex-x_k5xQ&usqp=CAU" alt="">
+            <h3>Sleepwear & Lingerie</h3>
+        </div>
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9L__buPOOXOYZqwAAjc2bWj71uUb_j-uSLV5NOmBozefCGr0m91JKPN81LK1HLyHwFEw&usqp=CAU" alt="">
+            <h3>Outfit Add-ons</h3>
+        </div>
+    </div>
+    <hr class="line">
+    <h1 class="detail">Budget zone </h1>
+    <div id="budgetZone">
+        <img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock19One-Women-18JULY2022.png" alt="">
+        <img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock19Two-Women-18JULY2022.png" alt="">
+        <img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock19Three-Women-18JULY2022.png" alt="">
+    </div>
+    <hr class="line">
+    <h1 class="detail"> Youth Store </h1>
+    <div id="youthStore">
+        <img src="https://lmsin.net/cdn-cgi/image/w=1232,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock-oneBytwo1A-Women-18JULY2022.png" alt="">
+    </div>
+   <!-- part two -->
+   <hr class="line">
+   <h1 class="detail">Trends </h1>
+   <div id="trends">
+      <img src="https://lmsin.net/cdn-cgi/image/w=616,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock7-oneBythree-A-Women-18JULY2022.png" alt="">
+      <img src="https://lmsin.net/cdn-cgi/image/w=616,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock7-oneBythree-B-Womenn-18JULY2022.png" alt="">
+   </div>
+   <hr class="line">
+   <div id="trends_2">
+     <img src="https://lmsin.net/cdn-cgi/image/w=616,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-Women-modularblock8-oneBythree-A-Women-18JULY2022.png" alt="">
+     <img src="https://lmsin.net/cdn-cgi/image/w=616,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock8-oneBythree-B-Women-18JULY2022.png" alt="">
+   </div>
+   <hr class="line">
+   <h1 class="detail">Top Stores </h1>
+   <div id="topstore">
+     <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock15One-Women-02JUNE2022.png" alt="">
+     <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock15Two-Women-02JUNE2022.png" alt="">
+     <img src="https://lmsin.net/cdn-cgi/image/w=500,q=70,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock15Three-Women-02JUNE2022.png" alt="">
+   </div>
+   <hr class="line">
+   <div id="topstore2">
+     <img src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-9modularblock-oneBythree-A-Women-18JULY2022.png" alt="">
+   </div>
+   <hr class="line">
+   <h1 class="detail">Gifting Zone </h1>
+   <div id="Giftingzone">
+ <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/desktop-modularblock14One-Women-26Oct2021.jpg" alt="">
+   </div>
+   <hr class="line">
+   <h1 class="detail">Connect With Us </h1>
+   <div id="connect">
+ <img src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.lmsin.net/MAX-Friday/MAX2.O/desktop-department-modularblock8-oneBythree-A-Women-21Oct2020.jpg" alt="">
+   </div>
+   <hr class="line">
+   <!-- day3 bottom part -->
+   <div id="subscribe">
+     <div>
+         <h2>Subscribe to our awesome emails.</h2>
+         <p>Get our latest offers and news straight in your inbox.</p>
+         <input type="text" placeholder="Please enter an email address">
+         <button>Subscribe</button>
+     </div>
+     <div>
+         <h2>Download our apps</h2>
+         <p>Shop our products and offers on-the-go.</p>
+         <button><img src="https://1000logos.net/wp-content/uploads/2016/10/apple-emblem.jpg" alt="">Download on the App Store</button>
+         <button><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSoHgrQZ76x9oyUOeO5DpcLIZ3Uqg0WK62GHMXk5DhrkzrpmQsuTI96XregTDmFFX4zLc&usqp=CAU" alt=""> Get It On Google Play</button>
+     </div>
+   </div>
+   <hr class="line">
+ <div id="category">
+     <div>
+         <h3>Women</h3>
+       <p>Tops</p>
+       <p>Dresses & Jumpsuits</p>
+       <p>Sportswear</p>
+       <p>Bottoms</p>
+       <p>Winterwear</p>
+       <p>Ethnicwear</p>
+       <p>Lingerie</p>
+       <p>Sleepwear</p>
+       <p>Accessories</p>
+       <p>Shoes</p>  
+     </div>
+     <div>
+         <h3>Men</h3>
+         <p>Tops</p>
+         <p>Bottoms</p>
+         <p>Sportswear</p>
+         <p>Winterwear</p>
+         <p>Accessories</p>
+         <p>Shoes</p>
+     </div>
+     <div>
+         <h3>Boys</h3>
+         <p>Tops</p>
+         <p>Bottoms</p>
+         <p>Indian Wear</p>
+         <p>Winter Wear</p>
+         <p>Essentials</p>
+         <p>Accessories</p>
+         <p>Shoes</p>
+     </div>
+     <div>
+         <h3>Girls</h3>
+         <p>Tops</p>
+         <p>Bottoms</p>
+         <p>Indian Wear</p>
+         <p>Winter Wear</p>
+         <p>Essentials</p>
+         <p>Accessories</p>
+         <p>Shoes</p>
+     </div>
+     <div>
+         <h3>Explore</h3>
+         <p>Offers</p>
+         <p>Magazine</p>
+     </div>
+     <div>
+         <h3>About</h3>
+         <p>About Us</p>
+         <p>Write To Us</p>
+         <p>Careers</p>
+         <p>Take a tour</p>
+         <p>Blog</p>
+         <p>Store Locator</p>
+         <p>Landmark Cares</p>
+     </div>
+     <div>
+         <h3>Help</h3>
+         <p>Contact Us</p>
+         <p>Shipping</p>
+         <p>Returns Process</p>
+         <p>Returns Policy</p>
+         <p>Help Center</p>
+     </div>
+ </div>
+ <hr class="line">
+ <div id="contacts">
+     <div>
+         <div>
+             <div>
+                 <img src="https://www.pngitem.com/pimgs/m/235-2356376_transparent-telephone-icon-png-phone-logo-for-business.png" alt="">
+             </div>
+            <div> 
+             <p>Talk to us</p>
+             <p>1800-123-1444</p>
+         </div>
+         </div>
+         <div>
+             <div> 
+                 <img src="https://miro.medium.com/max/640/1*j6HBZNZYoErSEZJsRhvsLg.jpeg" alt="">
+             </div>
+             <div>
+                 <p>Helpcenter</p>
+                 <p>help.maxfashion.com</p>
+             </div>
+         </div>
+         <div>
+             <div>
+                 <img src="https://cdn-icons-png.flaticon.com/512/1004/1004017.png" alt="">
+             </div>
+             <div>
+                 <p>Write To Us</p>
+             <p>help.in@maxfashion.com</p>
+             </div>
+         </div>
+     </div>
+     <div>
+         <img src="https://cdn-icons-png.flaticon.com/512/59/59439.png" alt="">
+         <img src="data:image/png;base64,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" alt="">
+         <img src="https://thumbs.dreamstime.com/b/instagram-logo-icon-vector-black-design-illustration-instagram-logo-icon-vector-black-design-illustration-white-background-146100148.jpg" alt="">
+     </div>
+ </div>
+ <hr class="line">
+ <div id="last">
+     <img src="https://www.landmarkgroup.com/ae/sites/default/files/Brand-logo/New%20Max%20Logo-%20Eng%20With%20Outline_1.png" alt="">
+     <p>© 2022 Retail World Limited.
+         Terms & Conditions - Privacy Policy</p>
+ </div>
+  
+
+</body>
+</html>
+<script>
+    let imgLinks=[
+    "https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.ssl.cf3.rackcdn.com/MAX-Friday/BLOCK-1-MAX-EOSS-11.JUNE.2018.jpg",
+        "https://imgaz1.chiccdn.com/os/202003/20200330212837_238.jpg",
+        "https://vedicfashion.com/wp-content/uploads/2022/03/STYLES-FOR-ALL-YOUR-MOOD.webp",
+        "https://cdn.shopify.com/s/files/1/0551/7593/8238/files/WhatsApp_Image_2021-06-22_at_23.53.03_1000x.jpg?v=1625984469",
+    ]
+    let leftBtn=document.getElementById("left-button");
+    let rightBtn=document.getElementById("right-button");
+    let crausers=document.getElementById("crauser");
+    let count=0;
+    rightBtn.addEventListener("click",function(){
+        count++;
+        if(count===imgLinks.length){
+            count=0;
+        }
+        crausers.src=imgLinks[count]
+    })
+
+    leftBtn.addEventListener("click",function(){
+        count--;
+        if(count<0){
+            count=imgLinks.length-1;
+        }
+        crausers.src=imgLinks[count]
+    })
+</script>

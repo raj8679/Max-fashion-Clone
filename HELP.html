@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #navbar{
+            width: 100%;
+            height: 45px;
+           background-color:black;
+           display: flex;
+           justify-content:space-around;
+           color:white;
+
+        }
+        #navbar>div{
+            width: 30%;
+            height:100%;
+            display:flex;
+            justify-content:space-around;
+        }
+        #navbar img{
+            width: 35px;
+        }
+        #nav2{
+            width: 30%;
+            height:80px;
+            display:flex;
+            justify-content:space-around;
+            margin-left:10%;
+        }
+        #nav2 img{
+            width:90px;
+        }
+        #pic{
+            width: 100%;
+        }
+        #pic img{
+           width: 100%;
+            height: 480px;
+        }
+        #pic>div:first-child{
+            position:relative;
+        }
+        #pic>div:last-child{
+            font-size: larger;
+            color: white;
+            position: absolute;
+            top:26%;
+            left: 35%;
+        }
+        #pic input{
+            width: 100%;
+            height: 50px;
+        }
+        #hover{
+            width: 80%;
+            height: 650px;
+            margin:auto;
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns:repeat(5,1fr);
+            grid-template-rows:repeat(3,210px);
+            gap:10px;
+        }
+        #hover>div{
+            padding-top: 20px;
+            border:1px solid rgb(201, 191, 191);
+           text-align: center;
+           color: rgb(110, 96, 96);
+           border-radius: 10px;
+        }
+        #hover>div:hover{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            cursor: pointer;
+        }
+        #ques1{
+            margin-left: 10%;
+            color: rgb(110, 96, 96);
+        }
+        #ques2{
+            width: 80%;
+            height: 230px;
+            margin: auto;
+            display: flex;
+            gap: 20px;
+        }
+        #ques2>div{
+            width: 32%;
+            font-size: 23px;
+            line-height:35px;
+            color: rgb(110, 96, 96);
+        }
+        hr{
+            width: 80%;
+            color: rgb(110, 96, 96);
+            margin-top: 35px;
+            margin-bottom: 30px;
+        }
+        /* part two */
+        #subscribe{
+        width: 80%;
+        margin:auto;
+        display: flex;
+        justify-content:space-around;
+      }
+      #subscribe img{
+        width: 35px;
+      }
+      #subscribe input{
+        width: 200px;
+        height: 50px;
+      }
+      #subscribe button{
+        background-color: black;
+        color: white;
+        width: 150px;
+        height: 60px;
+      }
+      #category{
+        width: 80%;
+        margin:auto;
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+      }
+      #category p{
+        line-height: 8px;
+      }
+      #contacts{
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+      }
+      #contacts>div{
+        display: flex;
+        height: 60px;
+        justify-content: space-between;
+      }
+      #contacts>div:first-child>div{
+        display: flex;
+        line-height: 4px;
+        gap: 20px;
+      }
+      #contacts>div:first-child img{
+        width: 20px;
+        border: 1px solid black;
+        border-radius: 100%;
+        padding: 10px;
+        margin-top: 4px;
+        margin-left: 5px;
+      }
+      #contacts>div:last-child img{
+        width: 23px;
+        height: 30px;
+        margin-top:5px;
+        margin-left: 20px;
+      }
+      #last{
+        width: 25%;
+        margin-left: 10%;
+        display: flex;
+        gap: 15px;
+      }
+      #last img{
+        width: 100px;
+      }
+
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div>
+            <img src="https://www.citypng.com/public/uploads/small/11635937388alumycqgep5h5v2je1trielg1hrrqxrcwjrimwx6yvlf4zqum0dvnfliketuu5pu1aobdjnhf08b9mbpthwhohvyvup761fyaval.png" alt="">
+            <p>Free Shipping</p>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAclBMVEUAAAD///91dXXV1dWvr69wcHDe3t75+flGRka2trZqamoTExPh4eFXV1ebm5uysrLp6enIyMj09PRhYWGmpqbu7u7T09MWFhbDw8N+fn4/Pz86OjpcXFwsLCydnZ0hISFQUFAzMzOJiYklJSWGhoaRkZHJ/oqTAAAIh0lEQVR4nO2d22KiMBCGraiIaAvWA2pVbPX9X3GLZmJIZpBAKuDOd7XbCTB/yGFywl6PYRiGYRiGYRiGYRiGYRiGYZjXYthvG0On+tL5W/uYp+4EHpsWQ3B0ptBrWgqB50rge9NKSN7dCJw1raOAmQuB4bJpGQUsQwcKE3Ezf+W1hxVITOoL3MC9NvXv5ZCzM7d2DjPLKVC03nY1bzSFAu/ELZdAEDKtd5sPyKnUhVNOScG1QZ27DOEuF1d+OUR205Pq91jDPWJ3fjkkBveqdxkQrc3XDv1yxxqqYuXo7QB59OnSL4d8goMVozcZrS3c+uWQBbhYLXqrXQaewAjqUZWLoR77+S71c9gs+Rqz9asHJHhYtIvemibK5Xj1oHIMV+Yzpw3jjHx4JaO3saVCeFdR7q9D4qHPZYh6ahm9BXC3NPfnDfHM55IvkDJ6C2wETuAqraMZ4498Mlp5rBK97eGalW5Z4M98Kkb3DMNhf19aIURrvmnaeKNm8ZBGE7qM0j1366M1Hdvo7YssDq3FMnqDdz76Y7dcAtEbUq9M5KirfL1tnhM4XSJ6+4a0/b/3yyGyp/5+lFL2eFb9ZwuQMcqj6A2P1rpASc+JaK0LlIve+pCqjXNrj7iA8wWrwyfoKIxorRPI6O1EJpFzay5WdJ7P47m3zkVrOjJ6O+D2DsytPaI4egvhHXcpWtORc29YPZPR2s/T/XLHD4hA1iE6Gq3p0NGbjNY+mvDLIXI9UI/eYJqwe9GaDkRv2pqujNa2zbjlkC0avclo7eHYowNgLcqpoAXqILJXuEdv0Iss27kSassaGhXZs8tI4KtJvxwio7eF9n8imusg8p1dI+xjQbQ2SWJq1SoNYqpZ2g7id6K87xfxgpjhWr/HA6ol/46DlDBt4gSZzZfRW7YFVa6Emk++Djbw2atr7ICPUq7zrRG6u3Wc5eYcnUk5RnQ9uY7q8KxO8MInR7qxUkbNaE3MC2BD5vBmQueYb/UczZjbABTNmATrpm+IpRcsmBbLfalhkP3fZ28g/oVEa2fSAiMtrHcR8R8aHIlnYSYRimDvV5QybEQkIpWzaYHobQAKsfVFkXfY2xBZhL2Nz1oKsWLqUYVMisfK0hQULuAfJh+0DCEe2wIhCs4caVBg1Q4zifYOWwP0aRkeXczEq1vAcAOrACIXsB1RsHqOtCfQUiNvA+IppBGG5SBkfgFOCiBlCWZmsBIouv2NHDaZFUAOqJB8BRMy6wixPZKvMNOFTOVB6I8UbjlLaJrkWjXt/VhOXpjzqHK8YRZTubBsOiQbMd949XLO1nTofqLDrG1y/4dZTKHbo73PpjOgP9Sbqrs/xlP3vjQZXdH9dI1Rqu7HNow8k8GyWbXlDKDZY8vcNPMMptWy1h46xHm+Tu3Vg0Da9VPFpBXhlWLSivBAMWkN20UxaUVY3eCiVTd134TWWMhA7Rq2yQhH3Ww0zu0N8tVm46gK1GKNOGfKFatBzpSTmD+ykutk8/tbRqqOT181Repb2OUjUVldFY/ec1fnPNrop7wCOTk31PeExTLQTEeaaZSCaRtrpkiWi59AM83v+TnQTL7ivfyjuFNyTzWY/ITH4UDXl5mC/j48fi2wfV/J+RSGswO252112YZhesFOTo0uaRhuLyvEFB1mYbg7J4hpufg6hvu+Lv3m/fAY/kwU72VTQG/Hi+hDXT72fGHCni/Qs14hQDJWkNAmr8B7s9jq+Dta/ayH5f6VTY+UeFDaRo2A3lS2og9fRb0dpV5tWMb4nkP/txqtp6jp2kgRErO6QkjM6gohMTDaFUnWvBISo7WyyTTPMt8DYKXRC7Vqqtz4NsmDbQITRzsviElUfHSH461rQQ+r3iK5E1aabhUt1Juxq/c9jYt+77nszob6G/Zl9PhlvOEAhnFbI9NiaOv3euv55kGjGxovfyp7qoX+rpZy6Frg/Z3ju5pJUW4e4qxm0jI3D9FXTfNAnYcY5kpxkiqmWU5jrA6yx4Hq7UiNp/a5lnyqBvBrzXviAG26iLN0UbxIddPukGSmZTwwBqK7SzL9zd3lKpjow/D9ORn9muZe0NcfeewH3q8Uf5Sc9cWucBKsfqX40+RirFfPBnGmMkoOxomuAu8ZhmGaYN3FJRoLp4+x73v0vqJ2cvJ8Py77GYlrt1pqt22LuMY7JU8ri9mPbm3eE2FwuY0kYgRX6wDx07FymhW2ElZYPXFbYIXVE7cFVlg9cVtghdUTtwXXCmdlsD0+Xgu3CuX2xgdMnzgCc6qw/KF8J98aK4dThRbfGKzx9R9LnCqkF7oMnrfvvymFbr8xWsdpq8T/jcJoWsD8FRQWdnfBf61wXbDKX4yXdkMhsWxeCvKhbVLYN/0uD/lBgTYpJPdilIGc8m2TwlpfJSYP9byMQvKE8osonNNRYAsVBr3QmhpON6DQ8VlVVmiVmBVmsEJWiNH/TmnjCyjcZrsL6O9cvYDC29ZDcnNB9xWKU/bkV0m6r1CcHiH3wLBCq8SsMIMVskIDVsgKrRKzwozHCi23CWy7p3A+KlrZMYi6p7AarLAVCmvN6ndCYdm9KijkdzvbpPDHYpXcgFxybZPCXlr5d058+vxAqxT+apxU4qvgUEzLFP4BrNAqMSvMYIXOYYVWiVlhBit0Diu0SswKM1ihc1ihVWJWmMEKncMKrRKzwgxW6BxWaJWYFWawQuewQqvEL6OQ/PU1C4XPOwdc8PF8E6FwufLurJSzHBYKp96TWC0rKNS4v1ILhU+njsK7ou4r/MAvll/SbrPCcvuQ0C8AK2frxUdnC3+/jMilP6fcR+b26LW+PFd1vv4f+0mJO+THqf+Ykr+0PUT2Eqg/8JMVwemDTxSeny4uc7J07xT2dfJd97j/+FZ74x5/Tzd/ApdhGIZhGIZhGIZhGIZhGIZhGME/u6GD9cI+lLYAAAAASUVORK5CYII=" alt="">
+            <p>Return To Store</p>
+        </div>
+        <div>
+            <p>Download Our Apps</p>
+            <p>|</p>
+            <p>Store Locator</p>
+            <p>|</p>
+            <p>Help</p>
+
+        </div>
+    </div>
+    <div id="nav2">
+        <img src="https://www.landmarkgroup.com/int/sites/default/files/Brand-logo/New%20Max%20Logo-%20Eng%20With%20Outline_1.png" alt="">
+        <a href="WOMEN.html"><p>Women</p></a>
+        <p>Men</p>
+        <p>Girls</p>
+        <p>Boys</p>
+    </div>
+    <div id="pic">
+        <div>
+            <img src="https://uatwww2.maxfashion.in/sites/all/modules/custom/freshdesk/images/banner-desktop.jpg" alt="">
+        </div>
+        <div>
+            <h1>How Can We Help You Today?</h1>
+            <input type="text" placeholder="Enter your search term here">
+        </div>
+    </div>
+    <div id="hover">
+        <div>
+            <img src="https://uatwww2.maxfashion.in/sites/all/modules/custom/freshdesk/images/Shipping.svg" alt="">
+            <h3>Shipping</h3>
+            <p>Get more information on delivery, schedules, charges and more.</p>
+        </div>
+        <div>
+            <img src="https://uatwww2.maxfashion.in/sites/all/modules/custom/freshdesk/images/My%20Account.svg" alt="">
+            <h3>My Account</h3>
+            <p>Learn how to create your account and update your information.</p>
+        </div>
+        <div>
+            <img src="https://uatwww2.maxfashion.in/sites/all/modules/custom/freshdesk/images/Orders.svg" alt="">
+            <h3>Orders</h3>
+            <p>Know more about the order and delivery process.</p>
+        </div>
+        <div>
+            <img src="https://uatwww2.maxfashion.in/sites/all/modules/custom/freshdesk/images/Payments.svg" alt="">
+            <h3>Payments</h3>
+            <p>Find out more about your payment options and plans.</p>
+        </div>
+        <div>
+            <img src="https://uatwww2.maxfashion.in/sites/all/modules/custom/freshdesk/images/Buy%20Now.svg" alt="">
+            <h3>Buy Now</h3>
+            <p>Find out how to pay, checkout and finish shopping in one easy step.</p>
+        </div>
+        <div>
+            <img src="https://uatwww2.maxfashion.in/sites/all/modules/custom/freshdesk/images/Tracking%20and%20Delivery.svg" alt="">
+            <h3>Tracking and Delivery</h3>
+            <p>Get more info on delivery schedules, times and addresses.</p>
+        </div>
+        <div>
+            <img src="https://uatwww2.maxfashion.in/sites/all/modules/custom/freshdesk/images/Returns%20Process.svg" alt="">
+            <h3>Returns Process</h3>
+            <p>Find out how to make a return online, to a store or schedule a pick-up.</p>
+        </div>
+        <div>
+            <img src="https://uatwww2.maxfashion.in/sites/all/modules/custom/freshdesk/images/Returns%20Policy.svg" alt="">
+            <h3>Returns Policy</h3>
+            <p>Discover exactly how or returns and refund works.</p>
+        </div>
+        <div>
+            <img src="https://uatwww2.maxfashion.in/sites/all/modules/custom/freshdesk/images/Click%20&%20Collect.svg" alt="">
+            <h3>Click & Collect</h3>
+            <p>Learn how you can shop and pay online and collect in-store.</p>
+        </div>
+        <div>
+            <img src="https://uatwww2.maxfashion.in/sites/all/modules/custom/freshdesk/images/Gift%20Card.svg" alt="">
+            <h3>Gift Card</h3>
+            <p>Now easily buy or use your gift cards online.</p>
+        </div>
+        <div>
+            <img src="https://uatwww2.maxfashion.in/sites/all/modules/custom/freshdesk/images/Other%20Information.svg" alt="">
+            <h3>Other Information</h3>
+            <p>Important info you need to know about shopping with us.</p>
+        </div>
+        <div>
+            <img src="https://uatwww2.maxfashion.in/sites/all/modules/custom/freshdesk/images/Landmark%20Rewards.svg" alt="">
+            <h3>Landmark Rewards</h3>
+            <p>Discover how our award winning loyality program works.</p>
+        </div>
+        <div>
+            <img src="https://uatwww2.maxfashion.in/sites/all/modules/custom/freshdesk/images/In-Store.svg" alt="">
+            <h3>In-Store</h3>
+            <p>Get more locations, timings, info on Gift vouchers and more.</p>
+        </div>
+
+    </div>
+    <div id="ques1">
+        <h1>Most popular questions</h1>
+    </div>
+    <div id="ques2">
+       <div>
+        <ul>
+            <li>What if I'm not at home when my order arrives?</li>
+            <li>When will I receive my order?</li>
+            <li>What is your policy on returns?</li>
+        </ul>
+       </div>
+       <div>
+        <ul>
+            <li>How do I change my email address?</li>
+            <li>How do I return my products?</li>
+            <li>Can I exchange my purchase for another product?</li>
+        </ul>
+       </div>
+       <div>
+        <ul>
+            <li>How do I cancel an order?</li>
+            <li>I just returned my products. When will I receive my refund?</li>
+            <li>If I have used a promo code to place my order, how is my refund calculated?</li>
+        </ul>
+       </div>
+    </div>
+    <hr>
+    <!-- part two -->
+    <div id="subscribe">
+        <div>
+            <h2>Subscribe to our awesome emails.</h2>
+            <p>Get our latest offers and news straight in your inbox.</p>
+            <input type="text" placeholder="Please enter an email address">
+            <button>Subscribe</button>
+        </div>
+        <div>
+            <h2>Download our apps</h2>
+            <p>Shop our products and offers on-the-go.</p>
+            <button><img src="https://1000logos.net/wp-content/uploads/2016/10/apple-emblem.jpg" alt="">Download on the App Store</button>
+            <button><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSoHgrQZ76x9oyUOeO5DpcLIZ3Uqg0WK62GHMXk5DhrkzrpmQsuTI96XregTDmFFX4zLc&usqp=CAU" alt=""> Get It On Google Play</button>
+        </div>
+      </div>
+      <hr class="line">
+    <div id="category">
+        <div>
+            <h3>Women</h3>
+          <p>Tops</p>
+          <p>Dresses & Jumpsuits</p>
+          <p>Sportswear</p>
+          <p>Bottoms</p>
+          <p>Winterwear</p>
+          <p>Ethnicwear</p>
+          <p>Lingerie</p>
+          <p>Sleepwear</p>
+          <p>Accessories</p>
+          <p>Shoes</p>  
+        </div>
+        <div>
+            <h3>Men</h3>
+            <p>Tops</p>
+            <p>Bottoms</p>
+            <p>Sportswear</p>
+            <p>Winterwear</p>
+            <p>Accessories</p>
+            <p>Shoes</p>
+        </div>
+        <div>
+            <h3>Boys</h3>
+            <p>Tops</p>
+            <p>Bottoms</p>
+            <p>Indian Wear</p>
+            <p>Winter Wear</p>
+            <p>Essentials</p>
+            <p>Accessories</p>
+            <p>Shoes</p>
+        </div>
+        <div>
+            <h3>Girls</h3>
+            <p>Tops</p>
+            <p>Bottoms</p>
+            <p>Indian Wear</p>
+            <p>Winter Wear</p>
+            <p>Essentials</p>
+            <p>Accessories</p>
+            <p>Shoes</p>
+        </div>
+        <div>
+            <h3>Explore</h3>
+            <p>Offers</p>
+            <p>Magazine</p>
+        </div>
+        <div>
+            <h3>About</h3>
+            <p>About Us</p>
+            <p>Write To Us</p>
+            <p>Careers</p>
+            <p>Take a tour</p>
+            <p>Blog</p>
+            <p>Store Locator</p>
+            <p>Landmark Cares</p>
+        </div>
+        <div>
+            <h3>Help</h3>
+            <p>Contact Us</p>
+            <p>Shipping</p>
+            <p>Returns Process</p>
+            <p>Returns Policy</p>
+            <p>Help Center</p>
+        </div>
+    </div>
+    <hr class="line">
+    <div id="contacts">
+        <div>
+            <div>
+                <div>
+                    <img src="https://www.pngitem.com/pimgs/m/235-2356376_transparent-telephone-icon-png-phone-logo-for-business.png" alt="">
+                </div>
+               <div> 
+                <p>Talk to us</p>
+                <p>1800-123-1444</p>
+            </div>
+            </div>
+            <div>
+                <div> 
+                    <img src="https://miro.medium.com/max/640/1*j6HBZNZYoErSEZJsRhvsLg.jpeg" alt="">
+                </div>
+                <div>
+                    <p>Helpcenter</p>
+                    <p>help.maxfashion.com</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://cdn-icons-png.flaticon.com/512/1004/1004017.png" alt="">
+                </div>
+                <div>
+                    <p>Write To Us</p>
+                <p>help.in@maxfashion.com</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <img src="https://cdn-icons-png.flaticon.com/512/59/59439.png" alt="">
+            <img src="data:image/png;base64,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" alt="">
+            <img src="https://thumbs.dreamstime.com/b/instagram-logo-icon-vector-black-design-illustration-instagram-logo-icon-vector-black-design-illustration-white-background-146100148.jpg" alt="">
+        </div>
+    </div>
+    <hr class="line">
+    <div id="last">
+        <img src="https://www.landmarkgroup.com/ae/sites/default/files/Brand-logo/New%20Max%20Logo-%20Eng%20With%20Outline_1.png" alt="">
+        <p>© 2022 Retail World Limited.
+            Terms & Conditions - Privacy Policy</p>
+    </div>
+
+</body>
+</html>
